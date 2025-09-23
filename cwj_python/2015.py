@@ -1,0 +1,13 @@
+x=int(input())
+def common_divisors(n):
+    divisors=set()
+    for i in range(1,int(n**0.5+1)):
+        if n%i ==0:
+            divisors.add(i)
+            divisors.add(n/i)
+    return divisors
+
+if sum(common_divisors(x))==2*x:
+    print("Y")
+else:
+    print("N")

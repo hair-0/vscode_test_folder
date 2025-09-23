@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/VSCode_test_folder.iml" filepath="$PROJECT_DIR$/.idea/VSCode_test_folder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../VSCode_test_folder_2/.idea/VSCode_test_folder_2.iml" filepath="$PROJECT_DIR$/../VSCode_test_folder_2/.idea/VSCode_test_folder_2.iml" />
+    </modules>
+  </component>
+</project>
