@@ -1,5 +1,0 @@
-x=input("第一位同学的成绩：")
-y=input("第二位同学的成绩：")
-z=input("第三位同学的成绩：")
-a=(int(x)+int(y)+int(z))//3
-print("平均分=",int(a))
