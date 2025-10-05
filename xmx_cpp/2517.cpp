@@ -1,10 +1,9 @@
 # include <iostream>
+# include <cmath>
 using namespace std;
 
 int main(){
-	std:: ios_base::sync_with_stdio(false);
-	std::cin.tie(NULL);
-
+	
 	int N;
 	std::cin>> N;
 	int workload=0;
@@ -25,7 +24,7 @@ int main(){
 			std:: cout << readnumber;
 		}
 		
-		if (i < N-1){
+		if (i < N-1){		
 			std::cout<< " ";
 
 		} 
