@@ -13,7 +13,6 @@ int main() {
         if (killer == 'A' || killer == 'C') {
             truth[1] = 1;
         }
-
         
         if (truth[0] == 0 && truth[1] == 0) {
             truth[2] = 1;
