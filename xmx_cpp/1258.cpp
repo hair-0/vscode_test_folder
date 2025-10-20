@@ -9,7 +9,6 @@ int main() {
         if (killer != 'A') {
             truth[0] = 1;
         }
-
         //B truth
         if (killer == 'A' || killer == 'C') {
             truth[1] = 1;
