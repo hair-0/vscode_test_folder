@@ -1,5 +1,0 @@
-m, n = map(int, input().split())
-list1 = list(map(int, input().split()))
-list2 = list(map(int, input().split()))
-merged_list = sorted(set(list1 + list2))
-print(' '.join(map(str, merged_list)))
