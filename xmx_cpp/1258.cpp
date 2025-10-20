@@ -3,7 +3,6 @@ using namespace std;
 
 int main() {
     for (char killer = 'A'; killer <= 'F'; ++killer) {
-
         int truth[6] = {0};
 	
 	//A truth
