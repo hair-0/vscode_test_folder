@@ -4,63 +4,38 @@ using namespace std;
 
 void print_calenda(int days, int first_day, int week_start)
 {
-
 //先查合法性
-	if (days < 28 || days > 31)
+	if (days < 28 || days > 31 || first_day < 1 || first_day > 7 || week_start < 1 || week_start > 7)
 	{
-		std::cout << "ERROR" << std::endl;
+		std::cout << "ERROR";
 		return;
 	}
-	if (first_day < 1 || first_day > 7)
-	{
-		std::cout << "ERROR" << std::endl;
-		return;
-	}
-
-//再计算空位
-	int first_day_0 = first_day - 1;
-	int week_start_0 = week_start - 1;
-	int offset = (first_day_0 - week_start_0 + 7) % 7;
-	int day_grid = 0;
 	
-	for (int i=0; i < offset; ++i)
+//第一天之前的空位
+	int padding = (first_day - week_start + 7) % 7;
+	for (int i = 0; i < padding; ++i)
 	{
-	std::cout << std::setw(2) << " " << " ";
-	day_grid ++;
+			cout << "   ";//三个空格
 	}
 	
-//print
-	int current_day = 1;
-	
-	while (current_day <= days)
+//所有日期
+	int day_of_week_counter = padding;
+	for (int current_day = 1; current_day <= days; ++current_day)
 	{
-		std::cout << std::setfill('0')<<std::setw(2) << current_day;
-	day_grid ++;
-
-		if (day_grid % 7 == 0)
+		cout << setfill('0') << setw(2) << current_day;
+		day_of_week_counter++;
+		
+		if (day_of_week_counter == 7)
 		{
-			std::cout << std::endl;
+			cout << endl;
+			day_of_week_counter = 0;
 		}
-		else
+		else if (current_day < days)
 		{
-			if (current_day < days)
-			{
-				std::cout << " ";
-			}
-
+			cout << " ";
 		}
-		current_day ++;
-
 	}
-
-	if (day_grid > 0 && day_grid % 7 !=0)
-	{
-		std::cout << std::endl;
-
-	}
-
 }
-
 
 int main()
 {
