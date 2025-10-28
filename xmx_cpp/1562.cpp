@@ -1,6 +1,8 @@
 # include <iostream>
 using namespace std;
 
+bool checkSpecial(int i, int n);
+
 bool checkSpecial(int i, int n)
 {
 	int origin_num = i;
