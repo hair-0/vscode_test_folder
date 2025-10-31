@@ -49,4 +49,4 @@ int main(){
           << ", Digits:"<< digits
           << ", Others:"<< others;
     return 0;
-}
+    }
