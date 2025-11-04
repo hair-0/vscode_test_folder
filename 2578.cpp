@@ -1,8 +1,16 @@
 #include<iostream>
 using namespace std;
 
-int map(){
-    //完成函数map
+int square(int x);
+int div2 (int x);
+int poly2(int x);
+
+int* map(int (*func)(int), const int* arr, int size){
+    int* result = new int [size];
+    for (int i = 0; i < size; ++i){
+        result[i] = func(arr[i]);
+    }
+    return result;
 }
 
 int square(int x){
@@ -22,12 +30,11 @@ int main(){
     cin >> size;
     int arr[1000];
     for(int i = 0; i < size; i++) cin >> arr[i];
-    
-    //定义数组op，包含三个函数：square  div2  poly2;
+
+    int (*op[3])(int) = {square, div2, poly2};
 
     cout << "0: square; 1: div2; 2: poly2" << endl;
     for (int i = 0; i < 3; ++i){
-        // map函数运用数组元素op[i]对数组arr中的每个元素进行操作
         int * result = map(op[i], arr, size);
         for(int j = 0; j < size; ++j){
             cout << result[j] << " ";
