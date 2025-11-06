@@ -26,6 +26,23 @@ SpaceInfo analyze_spaces(const char* str){
             result.space_count++;
         }
     }
+
+    if (result.space_count == 0 ){
+        result.space_positions = nullptr;
+        return result;
+    }
+
+    result.space_positions = new int[result.space_count];
+
+    int current_space_index = 0;
+    for (int i = 0; i < len; ++i){
+        if (str[i] == ' '){
+            result.space_positions[current_space_index] = i;
+            current_space_index++;
+        }
+
+    }
+    return result ; 
 }
 
 int main()
