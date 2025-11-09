@@ -60,7 +60,8 @@
     "iostream": "cpp",
     "random": "cpp",
     "vector": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "cctype": "cpp"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }
