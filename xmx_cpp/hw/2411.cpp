@@ -1,3 +1,4 @@
+//http://166.111.236.164:6080/tyche/#!html/Problem.html&gid=36&tid=1396&pid=2411&isOOP=false
 #include<iostream>
 #include<string>
 #include<algorithm>
